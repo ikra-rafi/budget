@@ -1,5 +1,6 @@
-# Name
+# Budget App
 ## Description
+This app is to keep track of your spending.
 ## Links
 ## Screenshot
 
