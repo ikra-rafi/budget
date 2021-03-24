@@ -25,9 +25,7 @@ self.addEventListener("install", event => {
 self.addEventListener("activate", event => {
   const currentCaches = [STATIC_CACHE, RUNTIME_CACHE];
   event.waitUntil(
-    caches
-      .keys()
-      .then(cacheNames => {
+    caches.keys().then(cacheNames => {
         // return array of cache names that are old to delete
         return cacheNames.filter(
           cacheName => !currentCaches.includes(cacheName)
