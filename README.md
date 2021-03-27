@@ -5,6 +5,12 @@ This app is to keep track of your spending.
 ### GitHub
 ## Screenshot
 
+index.js 154
+document.querySelector("#del-btn").addEventListener("click", function(event) {
+  event.preventDefault();
+  deletePending();
+});
+
 # Unit 18 PWA Homework: Online/Offline Budget Trackers
 
 Add functionality to our existing Budget Tracker application to allow for offline access and functionality.
