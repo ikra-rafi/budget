@@ -4,7 +4,7 @@
 
 body {
   font-size: 16px;
-  font-family: Arial;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: #F7FAFC;
 }
 
@@ -52,6 +52,7 @@ table {
 
 .total {
   font-size: 150%;
+  /* text-decoration: underline; */
 }
 
 form {
@@ -65,7 +66,7 @@ form {
   width: 90%;
   margin: 0 auto;
 }
-
+/* added tractions button margin */
 .transaction-buttons {
   margin-top: 25px;
 }
