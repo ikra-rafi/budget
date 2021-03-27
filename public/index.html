@@ -1,58 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="theme-color" content="#317EFB">
-  <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <!-- <link rel="manifest" href="dist/manifest.json"> -->
-
-  <title>Budget Tracker</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#317EFB" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>Budget Tracker</title>
 </head>
+
 <body>
-  <div class="wrapper">
-    <div class="total">
-      <div class="total">Your total is: $<span id="total">0</span></div>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" id="app-name" href="#">The Budget Tracker</a>
+    </nav>
+    <div class="wrapper">
+
+        <form>
+            <div class="form-group">
+                <label for="t-name">Transaction Name:</label>
+                <input type="text" id="t-name" placeholder="Name" />
+            </div>
+            <div class="form-group">
+                <label for="t-amount">Transaction Amount:</label>
+                <input type="number" min="0" id="t-amount" placeholder="Amount" />
+            </div>
+            <div class="transaction-buttons">
+                <button id="add-btn" class="btn btn-success">Add Funds</button>
+                <button id="sub-btn" class="btn btn-danger">Subtract Funds</button>
+            </div>
+            <p role="alert" class="error"></p>
+        </form>
+
+        <hr>
+        <div class="total">
+            <h1 class="jumbotron-heading">Available Balance: $<span id="total">0</span></h1>
+        </div>
+        <hr>
+
+        <div class="transactions">
+            <table class="table table-hover table-dark">
+                <thead>
+                    <th>TRANSACTIONS</th>
+                    <th>AMOUNT</th>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+
+        <canvas id="my-chart"></canvas>
     </div>
 
-    <div class="form">
-      <input type="text" id="t-name" placeholder="Name of transaction" />
-      <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-      <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-      <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
-      <p class="error"></p>
-    </div>
-
-    <div class="transactions">
-      <table>
-        <thead>
-          <th>Transaction</th>
-          <th>Amount</th>
-        </thead>
-        <tbody id="tbody">
-          
-        </tbody>
-      </table>
-    </div>
-    
-    <canvas id="myChart"></canvas>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src="index.js"></script>
-  <script src="db.js"></script>
-  <script>
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", () => {
-        navigator.serviceWorker.register("service-worker.js").then(reg => {
-          console.log("We found your service worker file!", reg);
-        });
-      });
-    }
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="/assets/js/db.js"></script>
+    <script src="/assets/js/index.js"></script>
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("service-worker.js").then(reg => {
+                    console.log("We found your service worker file!", reg);
+                });
+            });
+        }
+    </script>
 </body>
+
 </html>
