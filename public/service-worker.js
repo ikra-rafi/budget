@@ -47,7 +47,7 @@ self.addEventListener("activate", function(evt) {
     self.clients.claim();
 });
 
-//fetch
+//fetch. boiler plate code
 self.addEventListener("fetch", function(evt) {
     if (evt.request.url.includes("/api/")) {
         console.log('[Service Worker] Fetch (data)', evt.request.url);

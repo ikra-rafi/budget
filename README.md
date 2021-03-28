@@ -1,15 +1,17 @@
 # Budget App
 ## Description
-This app is to keep track of your spending.fkljal
+This app is to keep track of your spending which also has offline capabilities. Despite whether or not the use as internet connection, this app is fully functional with the ability to add or subtract expenses which totals overall expenses. The total is populated as well in offline mode when the user reconnects. User can download the app to their machine to utilize the functions.
 ## Links
 ### GitHub
+https://github.com/ikra-rafi/budget
+### Heroku
+https://secret-mountain-01555.herokuapp.com/
 ## Screenshot
 
-index.js 154
-document.querySelector("#del-btn").addEventListener("click", function(event) {
-  event.preventDefault();
-  deletePending();
-});
+## Technologies
+MongoDB, Heroku, Express, Mongoose, service-worker, manifest, and models.
+
+
 
 # Unit 18 PWA Homework: Online/Offline Budget Trackers
 
