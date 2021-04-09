@@ -6,7 +6,7 @@ This app is to keep track of your spending which also has offline capabilities. 
 https://github.com/ikra-rafi/budget
 ### Heroku
 https://secret-mountain-01555.herokuapp.com/
-## Screenshot
+## Screenshot 
 ![screenshot](public/assets/images/Budget-Table.png)
 ![screenshot](public/assets/images/Budget-Line4.png)
 
